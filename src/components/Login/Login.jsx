@@ -29,7 +29,7 @@ const Login = () => {
     //Side Effects
     useEffect(() => {
        if (user !== null) {
-        navigate('/Translation')
+        navigate('Translation')
     }
     }, [user, navigate])//Empty dependency means only run once
 
