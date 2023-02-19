@@ -1,6 +1,13 @@
+import Translation from "../components/Translation/Translation"
+import withAuth from "../hoc/withAuth"
+
 const TranslationPage = () => {
     return (
-        <h1>Translation Page</h1>
+        <>
+            <h1>Translation Page</h1>
+            <Translation></Translation>
+        </>
+        
     )
 }
-export default TranslationPage
+export default withAuth(TranslationPage)
