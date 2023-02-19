@@ -6,6 +6,7 @@ import {loginUser} from '../../api/user'
 import { storageSave } from '../../utils/storage'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
+import { STORAGE_KEY_USER } from '../../const/storageKeys'
 
 const usernameConfig = {
     required: true,
@@ -29,9 +30,10 @@ const Login = () => {
     //Side Effects
     useEffect(() => {
        if (user !== null) {
-        navigate('Translation')
+        navigate('TranslationPage')
     }
     }, [user, navigate])//Empty dependency means only run once
+    
 
     //Event Handlers
     const onSubmit = async ({username}) => {
@@ -41,7 +43,7 @@ const Login = () => {
             setApiError(error)
         }
         if (userResponse !== null) {
-            storageSave('Translator-user', userResponse) //If sucessfuly logged in, store user in local storage
+            storageSave(STORAGE_KEY_USER, userResponse) //If sucessfuly logged in, store user in local storage
             setUser(userResponse)
         }
         setLoading(false)
