@@ -7,6 +7,7 @@ import { storageSave } from '../../utils/storage'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import { STORAGE_KEY_USER } from '../../const/storageKeys'
+import './Login.css';
 
 const usernameConfig = {
     required: true,
@@ -65,22 +66,31 @@ const Login = () => {
     })()
 
     return (
-        <>
-            <h2>Whats your name?</h2>
+        <> 
+            <header className='welcome'>Lost in translation</header>
+            
+            <section className='loginSection'>
+            <img className='logo' alt='logo'></img>
+            <h2>Lost in Translation</h2>
+            <h4>Get started</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <fieldset>
-                    <label htmlFor="username">Username</label>
-                    <input type="text"
-                        placeholder='Enter your name'
-                        {...register("username", usernameConfig)} 
-                        />
-                        {errorMessage}
-                </fieldset>
+                <div className='LoginForm'>
+                    <fieldset>
+                        <label htmlFor="username"></label>
+                        <input type="text"
+                            placeholder='Enter your name'
+                            {...register("username", usernameConfig)} 
+                            />
+                            {errorMessage}
+                   
 
-                <button type="submit" disabled={loading}>Continue</button>
-                { loading && <p>Logging in...</p>}
-                {apiError && <p> {apiError }</p>}
+                    <button type="submit" disabled={loading} className='submitBtn'>Continue</button>
+                    </fieldset>
+                    { loading && <p>Logging in...</p>}
+                    {apiError && <p> {apiError }</p>}
+                </div>
             </form>
+            </section>
         </>
     )
 }
