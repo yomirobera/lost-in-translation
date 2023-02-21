@@ -1,6 +1,6 @@
 const Translation = () => {
     return (
-        <h1>test</h1>
+        <p>Enter the senetence you want to translate</p>
     )
 }
 export default Translation

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { useUser } from "../../context/UserContext"
+import './Navbar.css';
 
 const Navbar = () => {
 
@@ -7,7 +8,7 @@ const Navbar = () => {
     const { user } = useUser()
 
     return (
-        <nav>
+        <nav className="Navigation">
          
             { user !== null &&
             <ul>
