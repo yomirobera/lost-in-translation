@@ -1,5 +1,8 @@
 .welcome {
     background-color: #ECC36A;
+    background-image: url(./Logo-Hello.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
     padding: 10px;
     font-Family: "Comic Sans MS";
     font-size: 30px;
@@ -8,19 +11,24 @@
     border-style: solid;
     border-width: 1px;
 }
-
 .logo {
-    background-image: url(./Logo-Hello.png);
+    background-image: url('Logo-Hello.png');
     background-size: 200px;
-    padding-left: 100vw;
-    width: 200px;
+    margin-left: 100px;
     height: 200px;
+    width: 100%;
     background-repeat: no-repeat;
     display: flex;
-
+    position: relative;
 }
-
-
+.starterText {
+    width: 50%;
+    position: relative;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
 .loginSection {
     font-Family: "Comic Sans MS";
     background-color: #ECC36A;
@@ -30,13 +38,10 @@
     padding: 5vw;
     position: relative;
 }
-
-
 .loginSection label{
     text-align: center;
     font-size: 20px;
 }
-
 .loginSection input{
     text-align: center;
     padding: 20px;
@@ -44,12 +49,9 @@
     border-radius: 50px;
     font-size: 20px;
 }
-
 .LoginForm {
-    background-color: #edf6f9;
-
+    background-color: #EDF6F9;
 }
-
 .submitBtn {
  margin: 5px;
  font-size: 18px;
@@ -61,4 +63,3 @@
  background: rgb(141,217,252);
  cursor: pointer;
 }
-

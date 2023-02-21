@@ -66,24 +66,24 @@ const Login = () => {
     })()
 
     return (
-        <> 
-            <header className='welcome'>Lost in translation</header>
-            
+        <>     
             <section className='loginSection'>
-            <img className='logo' alt='logo'></img>
-            <h2>Lost in Translation</h2>
-            <h4>Get started</h4>
+            <section className='grid-container'>
+                <img className='logo' alt='log'></img>
+                <section className='starterText'>
+                    <h2>Lost in Translation</h2>
+                    <h4>Get started</h4>
+                </section>
+            </section>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='LoginForm'>
                     <fieldset>
                         <label htmlFor="username"></label>
                         <input type="text"
                             placeholder='Enter your name'
-                            {...register("username", usernameConfig)} 
+                            {...register("username", usernameConfig)}
                             />
                             {errorMessage}
-                   
-
                     <button type="submit" disabled={loading} className='submitBtn'>Continue</button>
                     </fieldset>
                     { loading && <p>Logging in...</p>}

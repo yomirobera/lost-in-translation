@@ -15,7 +15,8 @@ function App() {
   return (
     <BrowserRouter>
      <div className="App">
-      <Navbar/>
+     <header className='welcome'>Lost in translation</header>
+      <Navbar className='Navigation'/>
       <Routes>
         <Route path="/" element={< LoginPage />}/>
         <Route path="/TranslationPage" element={< TranslationPage />}/>
