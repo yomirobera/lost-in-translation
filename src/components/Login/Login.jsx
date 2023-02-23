@@ -69,7 +69,7 @@ const Login = () => {
         <>     
             <section className='loginSection'>
             <section className='grid-container'>
-                <img className='logo' alt='log'></img>
+                <section className='logo'></section>
                 <section className='starterText'>
                     <h2>Lost in Translation</h2>
                     <h4>Get started</h4>
@@ -77,15 +77,17 @@ const Login = () => {
             </section>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='LoginForm'>
-                    <fieldset>
+                    
                         <label htmlFor="username"></label>
+                        <label>
                         <input type="text"
-                            placeholder='Enter your name'
+                            placeholder='Enter your name ...'
                             {...register("username", usernameConfig)}
-                            />
+                        />
                             {errorMessage}
-                    <button type="submit" disabled={loading} className='submitBtn'>Continue</button>
-                    </fieldset>
+                        <button type="submit" disabled={loading} className='submitBtn'></button>
+                        </label>
+                    
                     { loading && <p>Logging in...</p>}
                     {apiError && <p> {apiError }</p>}
                 </div>
