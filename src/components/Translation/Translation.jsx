@@ -1,15 +1,25 @@
 import { useState } from 'react';
+import { addTranslation } from '../../api/translation';
+import { useUser } from '../../context/UserContext';
+
 import './Translation.css';
 const Translation = () => {
     const [inputText, setInputText] = useState("");
     const [translatedText, setTranslatedText] = useState("");
+    const {user} = useUser()
     const handleTranslation = () => {
 
         const translatedImages = inputText.split('').filter(name => name.toLowerCase() !== name.toUpperCase()).map((letter, index) => (
-            <img key={index} src={`images/${letter.toLowerCase()}.png`} alt={letter} width="60px" height="60px"/>
+            <img 
+            key={index} 
+            src={`images/${letter.toLowerCase()}.png`} 
+            alt={letter} 
+            width="47px" 
+            height="47px"/>
         ));
 
         setTranslatedText(translatedImages);
+        addTranslation(user, inputText);
     };
     return (
     <>  

@@ -1,6 +1,7 @@
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../context/UserContext"
 import { storageDelete } from "../../utils/storage"
+import './Profile.css'
 
 const ProfileActions = () => {
 
@@ -14,10 +15,9 @@ const ProfileActions = () => {
     }
 
     return (
-        <ul>
-            <li><button onClick={ handleLogoutClick }>Logout</button></li>
-        </ul>
-       
+            <p className="logout">
+                <button onClick={ handleLogoutClick } className="logoutBtn">Logout</button>
+            </p> 
     )
 }
 

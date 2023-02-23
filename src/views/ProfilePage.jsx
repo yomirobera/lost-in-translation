@@ -10,13 +10,10 @@ const ProfilePage = () => {
     const {user} = useUser()
 
     return (
-        <>
-             <h1>Profile Page</h1>
-             <ProfileHeader username = {user.username} />
-             <ProfileActions/>
-             <ProfileTranslation translationList = {user.translation}/>
-             
-             
+        <>  
+            <ProfileHeader username = {user.username} />
+            <ProfileActions/>
+            <ProfileTranslation translationList = {user.translation}/>
         </>
        
     )

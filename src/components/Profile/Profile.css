@@ -1,0 +1,34 @@
+.welcomeUser h2{
+    padding-left: 50px; 
+    padding-top: 30px;
+}
+
+.translationHistory h4{
+    padding-left: 50px;
+}
+
+.translationHistory p{
+    padding-left: 50px;
+    display: flex;
+}
+
+.translationHistory button{
+    text-decoration: none;
+    padding: 12px;
+    margin: 10px;
+    width: 90px;
+    overflow: hidden
+    
+}
+
+.logout{
+    padding-left: 50px;
+}
+
+.logoutBtn{
+    text-decoration: none;
+    padding: 12px;
+    margin: 10px;
+    width: 70px;
+    overflow: hidden
+}

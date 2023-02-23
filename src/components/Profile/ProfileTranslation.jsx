@@ -1,4 +1,3 @@
-import ProfileTranslationItem from "./ProfileTranslationItem"
 
 const ProfileTranslation = ({translationList}) => {
 
@@ -8,8 +7,7 @@ const ProfileTranslation = ({translationList}) => {
    
     return (
        <section>
-            <h4>Your translation history</h4>
-            <h5>{translationList}</h5>
+        
        </section>
        
     )
