@@ -1,0 +1,44 @@
+.Navigation {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0rem;
+    background-color: #ECC36A;
+    color: black;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+    margin-bottom: -15px;
+}
+
+.Navigation ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  
+  
+  .Navigation ul a {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 28vw;
+    color: #2f234f;
+    text-decoration: none;
+  }
+  
+  .Navigation ul a.active {
+    color: #574c4c;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .Navigation ul a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #574c4c;
+  }
+  

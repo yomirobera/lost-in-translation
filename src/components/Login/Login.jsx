@@ -7,6 +7,7 @@ import { storageSave } from '../../utils/storage'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import { STORAGE_KEY_USER } from '../../const/storageKeys'
+import './Login.css';
 
 const usernameConfig = {
     required: true,
@@ -65,22 +66,33 @@ const Login = () => {
     })()
 
     return (
-        <>
-            <h2>Whats your name?</h2>
+        <>     
+            <section className='loginSection'>
+            <section className='grid-container'>
+                <section className='logo'></section>
+                <section className='starterText'>
+                    <h2>Lost in Translation</h2>
+                    <h4>Get started</h4>
+                </section>
+            </section>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <fieldset>
-                    <label htmlFor="username">Username</label>
-                    <input type="text"
-                        placeholder='Enter your name'
-                        {...register("username", usernameConfig)} 
+                <div className='LoginForm'>
+                    
+                        <label htmlFor="username"></label>
+                        <label>
+                        <input type="text"
+                            placeholder='Enter your name ...'
+                            {...register("username", usernameConfig)}
                         />
-                        {errorMessage}
-                </fieldset>
-
-                <button type="submit" disabled={loading}>Continue</button>
-                { loading && <p>Logging in...</p>}
-                {apiError && <p> {apiError }</p>}
+                            {errorMessage}
+                        <button type="submit" disabled={loading} className='submitBtn'></button>
+                        </label>
+                    
+                    { loading && <p>Logging in...</p>}
+                    {apiError && <p> {apiError }</p>}
+                </div>
             </form>
+            </section>
         </>
     )
 }
