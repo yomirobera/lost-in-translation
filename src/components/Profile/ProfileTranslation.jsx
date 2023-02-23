@@ -1,6 +1,6 @@
 import ProfileTranslationItem from "./ProfileTranslationItem"
 
-const ProfileTranslation = () => {
+const ProfileTranslation = ({translationList}) => {
 
     /*const translationList = translations.map(
         translation => <ProfileTranslationItem key={ translation} translation={translation} />)
@@ -9,8 +9,9 @@ const ProfileTranslation = () => {
     return (
        <section>
             <h4>Your translation history</h4>
-           
+            <h5>{translationList}</h5>
        </section>
+       
     )
 }
 
