@@ -1,17 +1,21 @@
 import { useState } from 'react';
 import { addTranslation } from '../../api/translation';
+import { STORAGE_KEY_USER } from '../../const/storageKeys';
 import { useUser } from '../../context/UserContext';
+import { storageSave } from '../../utils/storage';
 import './Translation.css';
 const Translation = () => {
-    const {user} = useUser()
+    const {user, setUser} = useUser()
     const [inputText, setInputText] = useState("");
     const [translatedText, setTranslatedText] = useState("");
-    const handleTranslation = () => {
-
+    const handleTranslation = async () => {
+        const [error, updatedUser] = await addTranslation(user, inputText)
+        storageSave(STORAGE_KEY_USER, updatedUser)
+        setUser(updatedUser)
         const translatedImages = inputText.split('').filter(name => name.toLowerCase() !== name.toUpperCase()).map((letter, index) => (
             <img key={index} src={`images/${letter.toLowerCase()}.png`} alt={letter} width="47px" height="47px"/>
         ));
-        addTranslation(user, inputText)
+        
         setTranslatedText(translatedImages);
     };
     return (

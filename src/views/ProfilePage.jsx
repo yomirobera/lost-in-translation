@@ -11,10 +11,9 @@ const ProfilePage = () => {
 
     return (
         <>
-             <h1>Profile Page</h1>
              <ProfileHeader username = {user.username} />
-             <ProfileActions/>
              <ProfileTranslation translationList = {user.translation}/>
+             <ProfileActions/>
              
              
         </>

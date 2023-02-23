@@ -14,10 +14,7 @@ const ProfileActions = () => {
     }
 
     return (
-        <ul>
-            <li><button onClick={ handleLogoutClick }>Logout</button></li>
-        </ul>
-       
+        <button className="profilePageButton2" onClick={ handleLogoutClick }>Logout</button>   
     )
 }
 
