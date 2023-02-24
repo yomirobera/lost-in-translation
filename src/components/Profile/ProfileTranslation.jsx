@@ -13,9 +13,11 @@ const ProfileTranslation = () => {
         */
 
     const handleDeleteHistory = async () => {
-        const [error, updatedUser] = await deleteHistory(user)
-        storageSave(STORAGE_KEY_USER, updatedUser)
-        setUser(updatedUser);
+        if (window.confirm('Are you sure? This cannot be undone')) {
+            const [error, updatedUser] = await deleteHistory(user)
+            storageSave(STORAGE_KEY_USER, updatedUser)
+            setUser(updatedUser);
+        }
     }
     let translationList;
 
