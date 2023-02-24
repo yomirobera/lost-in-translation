@@ -1,5 +1,6 @@
 import ProfileTranslation from "./ProfileTranslation"
 import { useUser } from "../../context/UserContext"
+import './Profile.css';
 
 
 const ProfileHeader = ({username }) => {
@@ -8,9 +9,8 @@ const ProfileHeader = ({username }) => {
     return (
         <>
             <header>
-                <h4>Hello, Welcome back {username}</h4>
+                <h4>Welcome back, {username}</h4>
             </header>
-            <p>{user.translations}</p>
             
         </>
     )
