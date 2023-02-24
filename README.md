@@ -1,6 +1,12 @@
 # Lost in Translation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The repository includes a a sign language using Reat. The purpose of the project is to build a dynamic webpage using the react framework. The application has the following webpages.
+
+- The startup page – This area is the first thing a user sees and enters a username to advance to the next pages. The usernames are stored in API. The browsers' local storage is used to mange user sessions.
+- The translation page – This page is only displayed if the user is logged in. On this page, the user types in words the input box at the top of the page. After clicking on translate button, a sign language characters will appear in the translated box.
+
+- The profile page – This page displays the user up to ten translations histories if the user have made any translations. There is also a delete history button and a logout button. 
+
 
 ## Available Scripts
 
